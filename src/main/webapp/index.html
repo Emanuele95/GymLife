@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="GymLife">
+    <head>
+        <link lang="en">
+        <meta charset="UTF-8">
+        <title>GymLife</title>
+
+        <!-- Angular -->
+        <script src="res/angular/angular/angular.js"></script>
+        <script src="res/angular/angular-animate/angular-animate.js"></script>
+        <script src="res/angular/angular-route/angular-route.js"></script>
+        <script src="res/angular/angular-resource/angular-resource.js"></script>
+        <script src="res/angular/angular-messages/angular-messages.js"></script>
+        <script src="res/angular/angular-cookies/angular-cookies.js"></script>
+        <script src="res/angular/cryptojs/rollups/aes.js"></script>
+        <script src="res/angular/cryptojs/rollups/pbkdf2.js"></script>
+
+        <!-- jQuery -->
+        <script src="res/vendor/jquery/jquery.min.js"></script>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="res/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- LIBRERIE JavaScript PER GRAFICI  -->
+        <script src="res/vendor/raphael/raphael.min.js"></script>
+        <script src="res/vendor/morrisjs/morris.min.js"></script>
+
+        <!-- MetisMenu CSS -->
+        <link href="res/vendor/metisMenu/metisMenu.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="res/dist/css/GymLife.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="res/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="res/vendor/bootstrap/js/bootstrap.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="res/vendor/metisMenu/metisMenu.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="res/dist/js/GymLife.js"></script>
+
+        <!-- INIZIO CODICE TEMPLACE COMUNE -->
+        <script src="webui/templateComune/templateComuneModule.js"></script>
+        <script src="webui/templateComune/templateComuneController.js"></script>
+
+        <!-- INIZIO CODICE LOGIN -->
+        <script src="webui/Login/LoginModule.js"></script>
+        <script src="webui/Login/LoginController.js"></script>
+        <script src="webui/Login/LoginService.js"></script>
+
+        <!-- INIZIO CODICE PROFILO -->
+        <script src="webui/Profilo/ProfiloModule.js"></script>
+        <script src="webui/Profilo/ProfiloController.js"></script>
+        <script src="webui/Profilo/ProfiloService.js"></script>
+
+        <!-- INIZIO CODICE REGISTER -->
+        <script src="webui/Register/RegisterModule.js"></script>
+        <script src="webui/Register/RegisterController.js"></script>
+        <script src="webui/Register/RegisterService.js"></script>
+
+        <!-- INIZIO CODICE ALLENATI -->
+        <script src="webui/Allenati/AllenatiModule.js"></script>
+        <script src="webui/Allenati/AllenatiController.js"></script>
+        <script src="webui/Allenati/AllenatiService.js"></script>
+
+        <!-- INIZIO CODICE ARCHIVIO -->
+        <script src="webui/Archivio/ArchivioModule.js"></script>
+        <script src="webui/Archivio/ArchivioController.js"></script>
+        <script src="webui/Archivio/ArchivioService.js"></script>
+
+        <!-- INIZIO CODICE SCHEDEPERSONALI -->
+        <script src="webui/SchedePersonali/SchedePersonaliModule.js"></script>
+        <script src="webui/SchedePersonali/SchedePersonaliController.js"></script>
+
+        <!-- INIZIO CODICE CONSIGLIASCHEDA -->
+        <script src="webui/ConsigliaScheda/ConsigliaSchedaModule.js"></script>
+        <script src="webui/ConsigliaScheda/ConsigliaSchedaController.js"></script>
+        <script src="webui/ConsigliaScheda/ConsigliaSchedaService.js"></script>
+
+        <!-- INIZIO CODICE ESERCIZI -->
+        <script src="webui/Esercizi/EserciziModule.js"></script>
+        <script src="webui/Esercizi/EserciziController.js"></script>
+        <script src="webui/Esercizi/EserciziService.js"></script>
+
+        <!-- INIZIO CODICE PREVENZIONESTREATCHING -->
+        <script src="webui/PrevenzioneStreatching/PrevenzioneStreatchingModule.js"></script>
+        <script src="webui/PrevenzioneStreatching/PrevenzioneStreatchingController.js"></script>
+        <script src="webui/PrevenzioneStreatching/PrevenzioneStreatchingService.js"></script>
+
+        <!-- INIZIO CODICE STATISTICHEGLOBALI -->
+        <script src="webui/StatisticheGlobali/StatisticheGlobaliModule.js"></script>
+        <script src="webui/StatisticheGlobali/StatisticheGlobaliController.js"></script>
+        <script src="webui/StatisticheGlobali/StatisticheGlobaliService.js"></script>
+
+        <!-- INIZIO CODICE MASSIMALI -->
+        <script src="webui/MassimaliMisurazioni/MassimaliMisurazioniModule.js"></script>
+        <script src="webui/MassimaliMisurazioni/MassimaliMisurazioniController.js"></script>
+        <script src="webui/MassimaliMisurazioni/MassimaliMisurazioniService.js"></script>
+
+
+        <!-- Inizio Codice -->
+        <script src="webui/app.js"></script>    
+
+
+    </head>
+    <body>  
+        <div ng-view></div>
+        <div name="templateComuneController" ng-controller="templateComuneController"></div>
+    </body>

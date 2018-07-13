@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"   "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ 
+<hibernate-configuration>
+ 
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">informatica</property>
+        <!--         <property name="hibernate.connection.password"></property> -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/GymLife</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+        <property name="connection.autocommit">true</property>
+        
+        <mapping class="GymLife.persistent.entity.User"/>
+        <mapping class="GymLife.persistent.entity.Esercizio"/>
+        <mapping class="GymLife.persistent.entity.Massimale"/>
+        <mapping class="GymLife.persistent.entity.Misurazione"/>
+        <mapping class="GymLife.persistent.entity.Parti_misurazione"/>
+        <mapping class="GymLife.persistent.entity.Scheda"/>
+        <mapping class="GymLife.persistent.entity.Giornata_scheda"/>
+        <mapping class="GymLife.persistent.entity.Esercizio_giornata"/>
+        <mapping class="GymLife.persistent.entity.SalvaScheda"/>
+        <mapping class="GymLife.persistent.entity.Storico_esercizio"/>
+        <mapping class="GymLife.persistent.entity.Giornata_scheda"/>
+        <mapping class="GymLife.persistent.entity.Storico_allenamento"/>
+        <mapping class="GymLife.persistent.entity.Votazione"/>
+
+
+
+    </session-factory>
+ 
+</hibernate-configuration>

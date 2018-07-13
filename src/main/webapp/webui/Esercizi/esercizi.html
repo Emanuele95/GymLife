@@ -1,0 +1,61 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper">
+
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="col-lg-4">
+                <h1 class="page-header">Esercizi</h1>
+
+                <label>Scegli un esercizio </label>
+                <select ng-model="Esercizio" ng-options="y for y in esercizi" ng-change="trova_esercizi()" ng-init="trova_esercizi()"></select><br>
+                <br>
+                <label>Scegli un muscolo </label>
+                <select ng-model="Muscolo" ng-options="y for y in muscoli" ng-change="trova_esercizi()" ng-init="trova_esercizi()"></select><br>
+                <br>
+                <label>Scegli un livello di dificoltà </label>
+                <select ng-model="Difficolta" ng-options="y for y in difficolta" ng-change="trova_esercizi()" ng-init="trova_esercizi()"></select><br>
+                <br>
+                <label>Esercizi a corpo libero? </label>
+                <select ng-model="Corpolibero" ng-options="y for y in corpolibero" ng-change="trova_esercizi()" ng-init="trova_esercizi()"></select>
+            </div>
+
+            <div class="col-lg-6">  
+                <h2  class="page-header" style="visibility: hidden"> Esercizo </h2>
+                <div id="esercizi" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="nome" class="modal-title"> </h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="descrizione"></p>
+                        <p id="consigli"></p>
+                        <p id="difficolta"></p>
+                        <p id="muscolo"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/oK6YMPILKsQ" frameborder="0" allowfullscreen></iframe>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,38 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper" ng-init="massimaliPersonali();">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Allenati</h1>
+            <div id="allenamento"></div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div id="scelte">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary" ng-click="nuovo_allenamento()" style="background-color:#5cb85c;">
+                    <div class="panel-heading" style="background-color:#5cb85c;">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-plus fa-5x" style= "color: #fff;"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <botton ng-model="nuovoAllenamento" class="bottoni" ng-click="nuovo_allenamento()">Nuovo Allenamento</botton>                             
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <br>
+    <div id="pulsantiera">
+        <button id="inizio" ng-click="inizioattivita()">Inizio Allenamento</button>
+        <button id="fine" ng-click="fineattivita()">Fine Allenamento</button>
+    </div>
+
+</div>

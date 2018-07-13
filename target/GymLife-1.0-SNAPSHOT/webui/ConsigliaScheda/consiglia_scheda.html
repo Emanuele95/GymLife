@@ -1,0 +1,61 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-4">
+
+                <h1 class="page-header">Consigliami Scheda</h1>
+
+                <label>Scegli un regime </label>
+                <select ng-model="Regime" ng-options="y for y in regime" ng-change="trova_scheda()" ng-init="trova_scheda()"> </select><br>
+                <br>
+
+                <label>Scegli per numero di giorni </label>
+                <select ng-model="Giorni" ng-options="y for y in giorni" ng-change="trova_scheda()" ng-init="trova_scheda()" > </select><br>
+                <br>
+
+                <label>Scegli un livello di dificoltà </label>
+                <select ng-model="DifficoltaScheda" ng-options="y for y in difficoltascheda" ng-change="trova_scheda()" ng-init="trova_scheda()"> </select><br>
+                <br>
+
+                <label>Da quanto non ti alleni? </label>
+                <select ng-model="Inativita" ng-options="y for y in inativita" ng-change="trova_scheda()" ng-init="trova_scheda()"> </select>
+                <div id="esercizi" >
+                </div>
+            </div>
+            <div class="col-lg-6">  
+                <h2  class="page-header" style="visibility: hidden">Consigliami Scheda</h2>
+                <div id="schede" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalSscheda" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="nomeschedamodal" class="modal-title">Scheda:  </h4>
+                    </div>
+                    <div class="modal-body" id="giornischeda">
+                    </div>
+                    <div id="dettagli"></div>
+                    <div class="modal-footer" id="modal_footer"> 
+                        <button type="button" class="btn btn-default bello" ng-click="salva_scheda()" ng-init = "trova_scheda()"data-dismiss="modal">Salvare?</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

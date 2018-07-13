@@ -1,0 +1,96 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Massimali & Misurazioni</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div id="massimali_misurazioni">
+            <div class="clearfix"></div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary" ng-click="display_massimali()" style="background-color:#f0ad4e;">
+                    <div class="panel-heading" style="background-color:#f0ad4e;">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-angle-double-up fa-5x" style= "color: #fff;"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <botton ng-model="massimali" class="bottoni" ng-click="display_massimali()" >Massimali</botton>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary" ng-click="display_misurazioni()" style="background-color:#5cb85c;">
+                    <div class="panel-heading" style="background-color:#5cb85c;">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-arrows-alt fa-5x" style= "color: #fff;"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <botton ng-model="misurazioni" class="bottoni" ng-click="display_misurazioni()">Misurazioni</botton>                             
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary"  ng-click="display_peso()" style="background-color:#d9534f;">
+                    <div class="panel-heading" style="background-color:#d9534f;">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-balance-scale fa-5x" style= "color: #fff;"></i> 
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <botton ng-model="peso" class="bottoni" ng-click="display_peso()">Bilancia</botton>                           
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="massimalidiv">
+            <label id="esercizio_label">Scegli un esercizio </label>
+            <select id="esercizio" ng-model="Esercizio" ng-options="y for y in esercizi"> </select> <br id="br11">
+            <br id="br12">
+            <label id="kg_label">Quanti KILOGRAMMI hai caricato? </label>
+            <input id="kg" ng-model="Massimale" type="number" min="1" > <br id="br13">
+            <br id="br14">
+            <button id="NewMassimale"  ng-click="NewMassimale()">Salva Massimale</button>
+        </div>
+
+        <div id="misurazionidiv">
+            <label id="misurazione_label">Scegli una parte del corpo da misurare </label>
+            <select id="misurazione" ng-model="Misurazione" ng-options="y for y in misurazioni"> </select><br id="br21">
+            <br id="br22">
+            <label id="cm_label">Quanti CENTIMETRI misuri? </label>
+            <input id="cm" ng-model="Valore_misurazione" type="number" min="1"><br id="br23">
+            <br id="br24"> 
+            <button id="NewMisurazione"  ng-click="NewMisurazione()">Salva Misurazione</button>
+        </div>
+
+        <div id="pesodiv">
+            <label id="peso_label">Quanti KILOGRAMMI pesi? </label>
+            <input id="peso" ng-model="Peso" type="number" min="1" required><br id="br31">
+            <br id="br32"> 
+            <button id="NewBilancia"  ng-click="NewBilancia()">Salva il valore della bilancia</button>
+        </div>
+
+
+
+
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
+
+<!-- /.row -->

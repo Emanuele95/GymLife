@@ -1,0 +1,207 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Profilo</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <a href="#/schede_personali">
+            <div class="clearfix"></div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary" style="background-color:#f0ad4e;">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-file-text-o fa-5x" style= "color: #fff;"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="bottoni">Schede Personali</div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <a href="#/archivio">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary" style="background-color:#5cb85c;">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-book fa-5x" style= "color: #fff;"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="bottoni">Archivio</div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <a href="#/allenati">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary" style="background-color:#d9534f;">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-clock-o fa-5x" style= "color: #fff;"></i> 
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="bottoni">Allenati</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Grafico 1 Example--------------------------------------------------------------------------------------------------------- -->
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i> Andamento Massimali
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <select id="massimaleprofilo" ng-model="MassimaleProfilo" ng-options="y for y in massimaleprofilo"> </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="graficomassimale"></div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine grafico 1 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <!-- grafico 2 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i>Andamento Misurazioni
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <select id="misurazioneprofilo" ng-model="MisurazioneProfilo" ng-options="y for y in misurazioneprofilo"> </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="graficomisurazione"></div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine grafico 2 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <!-- grafico 3 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i> Andamento Peso
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="graficopeso"></div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine grafico 3 Example--------------------------------------------------------------------------------------------------------- -->
+                        </div>
+                        <!-- /.col-lg-8 -->
+                        <div class="col-lg-4">
+                            <!-- grafico 4 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i> Andamento % Chiusura
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="graficochiusura"></div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine grafico 4 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <!--  grafico 5 Example--------------------------------------------------------------------------------------------------------- -->
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-bar-chart-o fa-fw"></i> Andamento Intensità
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="graficointensita"></div>
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine grafico 5 Example--------------------------------------------------------------------------------------------------------- -->
+                        </div>
+                        <!-- /.col-lg-4 -->
+                        <div class="col-lg-6">
+
+                            <!-- Frse motivazionale Example--------------------------------------------------------------------------------------------------------- -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-book"></i> Frase Motivazionale
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="morris-area-chart"></div>
+                                    Non hai bisogno di tanti esercizi per diventare forte, hai bisogno di diventare forte solo su pochi esercizi che trattano il corpo come un insieme, e non come una suddivisione in piccole parti.
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                        </div>
+
+                        <!-- Fine Frse motivazionale Example--------------------------------------------------------------------------------------------------------- -->
+                        <!-- Principio di fisiologia Example--------------------------------------------------------------------------------------------------------- -->
+
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <i class="fa fa-book"></i> Principio di fisiologia
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.panel-heading -->
+                                <div class="panel-body">
+                                    <div id="morris-area-chart"></div>
+                                    Fa che il cibo sia la tua medicina e non dimenticare mai di bere; siamo fatti per lo più di acqua!
+                                </div>
+                                <!-- /.panel-body -->
+                            </div>
+                            <!-- Fine Principio di fisiologia Example--------------------------------------------------------------------------------------------------------- -->
+                            <!-- /.col-lg-6-->
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                    </div>
+                    <!-- /#page-wrapper -->
+
+             
+
+                    <!-- /#wrapper -->

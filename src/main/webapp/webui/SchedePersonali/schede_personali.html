@@ -1,0 +1,42 @@
+<header ng-include="'webui/templateComune/header.html'"></header>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="col-lg-4">
+                <h1 class="page-header">Schede Personali</h1>
+                <div ng-init="trova_schede_personali()" id="schede_personali">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="modal_schede_personali" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id="nomeschedapersonalemodal" class="modal-title">Scheda:  </h4>
+                    </div>
+                    <div class="modal-body" id="giornischedapersonale">
+                    </div>
+                    <div id="dettaglipersonali"></div>
+                    <div class="modal-footer" id="modal_footer"> 
+                        <button type="button" class="btn btn-default bello" ng-click="vai_allenamento()" ng-init = "trova_scheda()">Ci alleniamo?</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="modal-footer" id="modal_footer2">
+                            <p id="descrizione"></p>
+                            <select class="votoclass" id="voto" ng-model="Votazione" ng-options="y for y in votazione"> </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
